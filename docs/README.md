@@ -21,7 +21,7 @@ tagline: null
       <div class="intro">
         <div class="container">
           <div class="hello">
-              <h1 class="slogan">你看那个人，Ta好像一条狗啊</h1>
+              <h1 class="slogan">你看那个人，Ta好像一条狗啊...</h1>
               <h2>
                 <div class="circle">
                   <span></span> 
