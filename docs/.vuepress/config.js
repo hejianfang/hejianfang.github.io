@@ -29,10 +29,10 @@ module.exports = {
     sidebar: {
       '/page1/': [
         {
-          title: 'HTML',
+          title: '微前端',
           collapsable: true, 
           children: [
-            { title: 'dom元素的操作', path:'/page1/DOM'},
+            { title: '微前端实践', path:'/page1/qiankun'},
           ]
         }
       ],
