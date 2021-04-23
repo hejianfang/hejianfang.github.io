@@ -9,7 +9,8 @@ module.exports = {
     sidebar: 'auto',
     nav: [
       { text: "首页", link: "/" },
-      { text: "前端技术", link: "/page1/" },
+      { text: "项目积累", link: "/page1/" },
+      { text: "前端技术", link: "/page2/" },
       // {
       //   text: "个人文章",
       //   items: [
@@ -29,7 +30,7 @@ module.exports = {
     sidebar: {
       '/page1/': [
         {
-          title: '微前端',
+          title: '项目总结',
           collapsable: true, 
           children: [
             { title: '微前端实践', path:'/page1/qiankun'},
