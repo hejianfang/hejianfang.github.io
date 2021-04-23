@@ -43,7 +43,7 @@ tagline: null
                   <span></span> 
                   <span></span>
                 </div>
-                react hooks
+                <!-- react hooks -->
               </h2>
               <h2>
                 <div class="circle">
@@ -51,7 +51,7 @@ tagline: null
                   <span></span> 
                   <span></span>
                 </div>
-                阅读 Vue 源码
+                <!-- 阅读 Vue 源码 -->
               </h2>
               <h2>
                 <div class="circle">
@@ -59,7 +59,7 @@ tagline: null
                   <span></span> 
                   <span></span>
                 </div>
-                阅读 React 源码
+                <!-- 阅读 React 源码 -->
               </h2>
               <h2>
                 <div class="circle">
@@ -67,7 +67,7 @@ tagline: null
                   <span></span> 
                   <span></span>
                 </div>
-                深入学习 Node
+                <!-- 深入学习 Node -->
               </h2>
               <h2>
                 <div class="circle">
@@ -75,7 +75,7 @@ tagline: null
                   <span></span> 
                   <span></span>
                 </div>
-                Flutter 常用组件演示 App
+                <!-- Flutter 常用组件演示 App -->
               </h2>
               <h2>
                 <div class="circle">
@@ -83,7 +83,7 @@ tagline: null
                   <span></span> 
                   <span></span>
                 </div>
-                Deno / Rust
+                <!-- Deno / Rust -->
               </h2>
               <h2>
                 <div class="circle">
@@ -91,7 +91,7 @@ tagline: null
                   <span></span> 
                   <span></span>
                 </div>
-                webAssembly
+                <!-- webAssembly -->
               </h2>
           </div>
         </div>

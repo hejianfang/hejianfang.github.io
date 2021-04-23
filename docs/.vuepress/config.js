@@ -1,12 +1,13 @@
+const path = require('path')
 module.exports = {
-  title: "技术博客",
+  title: "AOMR技术博客",
   description: "查阅知识",
   lastUpdated: "Last Updated", // string | boolean
-  base: '/',
+  base: "/",
   themeConfig: {
     search: true, //搜索
     searchMaxSuggestions: 10,
-    sidebar: 'auto',
+    sidebar: "auto",
     nav: [
       { text: "首页", link: "/" },
       { text: "项目积累", link: "/page1/" },
@@ -28,15 +29,32 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
-      '/page1/': [
+      "/page1/": [
         {
-          title: '项目总结',
-          collapsable: true, 
-          children: [
-            { title: '微前端实践', path:'/page1/qiankun'},
-          ]
-        }
+          title: "项目总结",
+          collapsable: true,
+          children: [{ title: "微前端实践", path: "/page1/qiankun" }],
+        },
       ],
-    }
+      "/page2/": [
+        {
+          title: "前端技术",
+          collapsable: true,
+          children: [{ title: "vue", path: "/page2/vue" }],
+        },
+      ],
+    },
+    displayAllHeaders: true, // 默认值：false
+    lastUpdated: "上次更新", // string | boolean
+    smoothScroll: true,
+  },
+  configureWebpack: () => {
+    return {
+      resolve: {
+        alias: {
+          public: path.resolve(__dirname, "./public"),
+        },
+      },
+    };
   },
 };
