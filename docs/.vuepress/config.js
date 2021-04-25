@@ -65,7 +65,7 @@ module.exports = {
           const year = date.getFullYear()
           const month = date.getMonth() + 1
           const day = date.getDate()
-          const hour = date.getHours()
+          const hour = date.getHours() + 8
           const minute = date.getMinutes()
           const second = date.getSeconds()
           const week = date.getDay()
@@ -73,6 +73,9 @@ module.exports = {
           return `${year}/${month}/${day} ${hour}:${minute}:${second} 周${weeks[week]}`
         }
       }
+    ],
+    [
+      '@vuepress/nprogress'
     ]
   ]
 };
