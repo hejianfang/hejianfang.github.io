@@ -2,7 +2,6 @@ const path = require('path')
 module.exports = {
   title: "AOMR技术博客",
   description: "查阅知识",
-  lastUpdated: "Last Updated", // string | boolean
   base: "/",
   themeConfig: {
     search: true, //搜索
@@ -57,4 +56,23 @@ module.exports = {
       },
     };
   },
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          const date = new Date(timestamp)
+          const year = date.getFullYear()
+          const month = date.getMonth() + 1
+          const day = date.getDate()
+          const hour = date.getHours()
+          const minute = date.getMinutes()
+          const second = date.getSeconds()
+          const week = date.getDay()
+          const weeks = ['日', '一', '二', '三', '四', '五', '六']
+          return `${year}/${month}/${day} ${hour}:${minute}:${second} 周${weeks[week]}`
+        }
+      }
+    ]
+  ]
 };
