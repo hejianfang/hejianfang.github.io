@@ -21,13 +21,12 @@
 做了以下工作：
 
 1. 调研目前开源的微前端框架，甄别对我们改动成本低的框架，最终确定qiankun.js。
-2. 必须熟悉教师平台各个模块代码逻辑，便于拆分。
-3. 主应用和子应用的搭建，并且确定拆分界定。
-4. 搭建前端脚手架gg-cli，便于迁移工作，使用方法已上传wiki前端工具目录下。
-5. 主应用和子应用模板的编写。
-6. 抽离基础与公共组件发布到npm。
-7. 规范代码检查工具 eslint + prettier。
-8. 优化系统之前的接口调用方式。
+2. 主应用和子应用的搭建，并且确定拆分界定。
+3. 搭建前端脚手架gg-cli，便于迁移工作，使用方法已上传wiki前端工具目录下。
+4. 主应用和子应用模板的编写。
+5. 抽离基础与公共组件发布到npm。
+6. 规范代码检查工具 eslint + prettier。
+7. 优化系统之前的接口调用方式。
 
 #### 教师平台接入实践
 
@@ -210,18 +209,18 @@ export default menu
 
 1. nav-app 布局子应用，负责系统整体布局，可以快速变更系统整体布局方式
 2. public-app 公共子应用，存放不属于各个模块的页面，比如工作台主页相关
-3. asms-app 学术积分应用
-4. seps-app 导师育人应用
-5. act-app 校本活动应用
-6. tpcs-app 荣誉项目应用
-7. tdc-app 校本培训应用
-8. tlps-app 协同备课应用
-9. sbis-app 校本科研应用
-10. skbs-app 知识中心应用
-11. ctes-app 教师评价应用
-12. tpas-app 教师发展应用
-13. mtms-app 混合教学应用
-14. slcs-app 听课评课应用
+3. asms-app 子应用
+4. seps-app 子应用
+5. act-app 子应用
+6. tpcs-app 子应用
+7. tdc-app 子应用
+8. tlps-app 子应用
+9. sbis-app 子应用
+10. skbs-app 子应用
+11. ctes-app 子应用
+12. tpas-app 子应用
+13. mtms-app 子应用
+14. slcs-app 子应用
 
 子应用间通信，利用基座的store进行
 
@@ -254,96 +253,10 @@ function render(container, store) {
 gg-cli init <子应用名字>  // 规范 模块名 + app;例如 sbis-app, tlps-app
 // 此时会生成相应的子应用，复制教师平台响应代码到子应用下
 ```
-
 2. 启动子应用
-   1. 打开根目录下 config文件夹，修改index.js,加入子应用的名字
-   2. 进入主应用 src/config/utils.js，在list数组中添加子应用启动规则
-   3. 启动子应用
 3. 多个子应用使用同一页面的处理
 
 每个子应用绝对独立，不能出现页面混用，实现完全物理隔离
-
-4. 迁移需要干什么？
-   1. **仔细查看基础库 gg-view-pc里的内容，不要重复添加**
-   ```javascript
-   git clone ssh://git@gitlab.guoguokeji.com:10022/guozhi-front/gg-view-pc.git
-   // 包含内容
-   /**
-    * 方法
-    */
-   // 生成全局唯一guid字符串
-   import guid from './function/guid.js'
-   // 规则检验
-   import reg from './function/reg.js'
-   // 对象和数组的深度克隆
-   import deepClone from './function/deepClone.js'
-   // 随机数
-   import random from './function/random.js'
-   // http参数
-   import ajaxData from './function/ajaxData.js'
-   // urlToken
-   import urlToken from './function/urlToken.js'
-   // 接口处理
-   import request from './request/Index.js'
-   // 检查权限
-   import checkPermission from './function/checkPermission.js'
-   // 时间转化
-   import timeTransform from './function/timeTransform.js'
-   /**
-    * 指令
-    */
-   import filter from './filter/index.js'
-   /**
-    * 过滤
-    */
-   import directive from './directive/index.js'
-   /**
-    * 文件预览
-    */
-   import Preview from './plugins/index'
-   // 包含通用组件
-     GgEmpty,
-     GgTabs,
-     GgChoose,
-     GgModal,
-     GgResourceList,
-     GgSelect,
-     GgTree,
-     GgUpload,
-     GgList,
-     GgListCard,
-     GgListItem,
-     GgListItem2
-   // 包含使用较多的业务组件，没有全局引入，需要按需引入
-     ModalDepartment
-     ModalGroups
-     ModalGroupUsers
-     ModalUsers
-   // 模板组件暂未放入组件库，位置在主应用组件components
-   // 原因是包含业务组件
-   ```
-   1. 调整组件，图片，样式修改为scss，调换路径问题
-   2. 图片分应用放入，并修改图片路径
-   3. 修改接口调用方式为$axios
-   4. 不要模块moment，时间格式化统一采用移动端用法
-   5. 不明白的地方随时问我
-5. 迁移计划
-
-迁移目标：教师平台，以备课和学术为例
-
-*前提，前端同步下各自开发任务，尽量避免重复迁移*
-
-> 1. 登录，目前登录只包含了常规登录，缺少stage环境登录，缺少企微扫码登录
-> 2. 教师评价模块
-> 3. 校本活动模块
-> 4. 校本培训模块
-> 5. 听课评课模块
-> 6. 混合教学模块
-> 7. 协同备课模块
-> 8. 知识中心
-> 9. 报表中心
-
-迁移过程中，模块有改动及时通知并记录。
 
 #### 目前架构的问题
 
