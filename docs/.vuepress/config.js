@@ -32,7 +32,10 @@ module.exports = {
         {
           title: "项目总结",
           collapsable: true,
-          children: [{ title: "微前端实践", path: "/page1/qiankun" }],
+          children: [
+            { title: "微前端实践", path: "/page1/qiankun" },
+            { title: "多环境打包配置", path: "/page1/build" }
+          ],
         },
       ],
       "/page2/": [
