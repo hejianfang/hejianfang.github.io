@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack.DefinePlugin | AOMR技术博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="查阅知识">
+    
+    <link rel="preload" href="/assets/css/0.styles.692262fb.css" as="style"><link rel="preload" href="/assets/js/app.11a61649.js" as="script"><link rel="preload" href="/assets/js/2.72be0d30.js" as="script"><link rel="preload" href="/assets/js/11.b643587f.js" as="script"><link rel="prefetch" href="/assets/js/10.b64419aa.js"><link rel="prefetch" href="/assets/js/12.8beef3e9.js"><link rel="prefetch" href="/assets/js/13.d5ff6af9.js"><link rel="prefetch" href="/assets/js/3.ff60a841.js"><link rel="prefetch" href="/assets/js/4.dfd3b4ff.js"><link rel="prefetch" href="/assets/js/5.03a9bf61.js"><link rel="prefetch" href="/assets/js/6.a44b6161.js"><link rel="prefetch" href="/assets/js/7.f4adb7c6.js"><link rel="prefetch" href="/assets/js/8.38984d10.js"><link rel="prefetch" href="/assets/js/9.b7b19714.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.692262fb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">AOMR技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/page1/" class="nav-link router-link-active">
+  项目积累
+</a></div><div class="nav-item"><a href="/page2/" class="nav-link">
+  前端技术
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/page1/" class="nav-link router-link-active">
+  项目积累
+</a></div><div class="nav-item"><a href="/page2/" class="nav-link">
+  前端技术
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>项目总结</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/page1/qiankun.html" class="sidebar-link">微前端实践</a></li><li><a href="/page1/build.html" class="sidebar-link">多环境打包配置</a></li><li><a href="/page1/webpack.html" aria-current="page" class="active sidebar-link">webpack.DefinePlugin使用</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="webpack-defineplugin"><a href="#webpack-defineplugin" class="header-anchor">#</a> webpack.DefinePlugin</h3> <blockquote><p>DefinePlugin 允许创建一个在编译时可以配置的全局常量。这可能会对开发模式和发布模式的构建允许不同的行为非常有用。如果在开发构建中，而不在发布构建中执行日志记录，则可以使用全局常量来决定是否记录日志。这就是 DefinePlugin 的用处，设置它，就可以忘记开发和发布构建的规则。</p></blockquote> <ul><li>用法</li></ul> <blockquote><ol><li>每个传进 DefinePlugin 的键值都是一个标志符或者多个用 . 连接起来的标志符。</li> <li>如果这个值是一个字符串，它会被当作一个代码片段来使用。</li> <li>如果这个值不是字符串，它会被转化为字符串(包括函数)。</li> <li>如果这个值是一个对象，它所有的 key 会被同样的方式定义。</li> <li>如果在一个 key 前面加了 typeof,它会被定义为 typeof 调用。</li> <li>这些值会被内联进那些允许传一个代码压缩参数的代码中，从而减少冗余的条件判断。</li></ol></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token constant">PRODUCTION</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token constant">VERSION</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">&quot;5fa3b9&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token constant">BROWSER_SUPPORTS_HTML5</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token constant">TWO</span><span class="token operator">:</span> <span class="token string">&quot;1+1&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;typeof window&quot;</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Running App version &quot;</span> <span class="token operator">+</span> <span class="token constant">VERSION</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token constant">BROWSER_SUPPORTS_HTML5</span><span class="token punctuation">)</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;html5shiv&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><blockquote><p>注意，因为这个插件直接执行文本替换，给定的值必须包含字符串本身内的实际引号。通常，有两种方式来达到这个效果，使用 '&quot;production&quot;', 或者使用 JSON.stringify('production')。</p> <p>1 这是一个定义全局变量的插件,定义的变量可以在webpack打包范围内任意javascript环境内访问,甚至在项目根目录之外的js里也可以使用(前提是这个js被项目引用)
+2 使用字符串或JSON.stringify()转换值,推荐使用JSON.stringify(),可以转换json对象</p></blockquote> <p>config/env.js</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> env <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  development<span class="token operator">:</span> <span class="token punctuation">{</span>
+    api<span class="token operator">:</span> <span class="token string">'www.baidu.com'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  production<span class="token operator">:</span> <span class="token punctuation">{</span>
+    api<span class="token operator">:</span> <span class="token string">'www.jd.com'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> config<span class="token punctuation">[</span>env<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><p>webpack.config.js</p> <div class="language- extra-class"><pre class="language-text"><code>const envConfig= require('./config/env');
+module.exports = {
+  ...
+  plugins: [
+    new webpack.DefinePlugin({
+      envConfig: JSON.stringify(envConfig)
+    })
+  ]
+  ...
+}
+
+// 输出
+console.log(envConfig) // {api: &quot;www.baidu.com&quot;}
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/5/14 9:44:3 周五</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/page1/build.html" class="prev">
+        多环境打包配置
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.11a61649.js" defer></script><script src="/assets/js/2.72be0d30.js" defer></script><script src="/assets/js/11.b643587f.js" defer></script>
+  </body>
+</html>
