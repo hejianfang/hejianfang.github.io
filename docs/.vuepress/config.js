@@ -34,7 +34,8 @@ module.exports = {
           collapsable: true,
           children: [
             { title: "微前端实践", path: "/page1/qiankun" },
-            { title: "多环境打包配置", path: "/page1/build" }
+            { title: "多环境打包配置", path: "/page1/build" },
+            { title: "webpack.DefinePlugin使用", path: "/page1/webpack" }
           ],
         },
       ],
