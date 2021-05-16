@@ -5,3 +5,4 @@
 - [【2021-05-14】 webpack.DefinePlugin](/page1/webpack/)
 - [【2021-05-15】 一个导出pdf的方案](/page1/exportPdf/)
 - [【2021-05-16】 前端自动化发布](/page1/scp2/)
+- [【2021-05-17】 vue中动态绑定hover效果](/page1/hover/)

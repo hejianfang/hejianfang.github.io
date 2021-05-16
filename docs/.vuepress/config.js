@@ -37,7 +37,8 @@ module.exports = {
             { title: "多环境打包配置", path: "/page1/build" },
             { title: "webpack.DefinePlugin使用", path: "/page1/webpack" },
             { title: "一个导出pdf的方案", path: "/page1/exportPdf" },
-            { title: "前端自动化发布", path: "/page1/scp2" }
+            { title: "前端自动化发布", path: "/page1/scp2" },
+            { title: "vue中动态绑定hover效果", path: "/page1/hover" }
           ],
         },
       ],
