@@ -35,7 +35,9 @@ module.exports = {
           children: [
             { title: "微前端实践", path: "/page1/qiankun" },
             { title: "多环境打包配置", path: "/page1/build" },
-            { title: "webpack.DefinePlugin使用", path: "/page1/webpack" }
+            { title: "webpack.DefinePlugin使用", path: "/page1/webpack" },
+            { title: "一个导出pdf的方案", path: "/page1/exportPdf" },
+            { title: "前端自动化发布", path: "/page1/scp2" }
           ],
         },
       ],
