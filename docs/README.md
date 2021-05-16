@@ -1,12 +1,12 @@
 ---
-home: true 
+home: true
 # heroImage: /hero.png
 heroText: null
 tagline: null
 # heroText: 七号仓库
 # tagline: 记录与分享 bug 的诞生
 # actionText: 围观吃瓜 →
-# actionLink: /archives/ 
+# actionLink: /archives/
 # footer: MIT Licensed | Copyright © 2020 飘香豆腐
 ---
 
@@ -37,61 +37,13 @@ tagline: null
         <div style="height: 700px;" class="container">
           <div class="hello reset-bottom">
               <h1 class="slogan">近期目标</h1>
-              <h2>
+              <h2 v-for="(item,index) in taegetList" :key="index">
                 <div class="circle">
                   <span></span> 
                   <span></span> 
                   <span></span>
                 </div>
-                <!-- react hooks -->
-              </h2>
-              <h2>
-                <div class="circle">
-                  <span></span> 
-                  <span></span> 
-                  <span></span>
-                </div>
-                <!-- 阅读 Vue 源码 -->
-              </h2>
-              <h2>
-                <div class="circle">
-                  <span></span> 
-                  <span></span> 
-                  <span></span>
-                </div>
-                <!-- 阅读 React 源码 -->
-              </h2>
-              <h2>
-                <div class="circle">
-                  <span></span> 
-                  <span></span> 
-                  <span></span>
-                </div>
-                <!-- 深入学习 Node -->
-              </h2>
-              <h2>
-                <div class="circle">
-                  <span></span> 
-                  <span></span> 
-                  <span></span>
-                </div>
-                <!-- Flutter 常用组件演示 App -->
-              </h2>
-              <h2>
-                <div class="circle">
-                  <span></span> 
-                  <span></span> 
-                  <span></span>
-                </div>
-                <!-- Deno / Rust -->
-              </h2>
-              <h2>
-                <div class="circle">
-                  <span></span> 
-                  <span></span> 
-                  <span></span>
-                </div>
-                <!-- webAssembly -->
+                {{item.name}} 
               </h2>
           </div>
         </div>
@@ -114,7 +66,15 @@ export default {
       drawTimes: 0,
       longside: 0,
       x: 0,
-      y: 0
+      y: 0,
+      taegetList: [
+        {name: '构建工具webpack的深入学习', id: 1},
+        {name: 'TS的学习以及使用', id: 2},
+        {name: '代码框架 vue3.0 的深入学习及快速使用', id: 3},
+        {name: '熟悉浏览器解析以及工作原理', id: 4},
+        {name: '熟悉服务端渲染', id: 5},
+        {name: '熟悉node.js，并可以运用接口服务', id: 6}
+      ]
     }
   },
   mounted(){

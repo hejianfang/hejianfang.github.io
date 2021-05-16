@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path");
 module.exports = {
   title: "AOMR技术博客",
   description: "查阅知识",
@@ -10,48 +10,43 @@ module.exports = {
     nav: [
       { text: "首页", link: "/" },
       { text: "项目积累", link: "/page1/" },
-      { text: "前端技术", link: "/page2/" },
-      // {
-      //   text: "个人文章",
-      //   items: [
-      //     {
-      //       text: "掘金",
-      //       link: "https://juejin.im/user/5c8f3303f265da612d633276",
-      //     },
-      //     {
-      //       text: "segmentfault",
-      //       link: "https://segmentfault.com/u/helloxiaoming",
-      //     },
-      //     { text: "CSDN", link: "https://blog.csdn.net/qq_40588413" },
-      //   ],
-      // },
+      {
+        text: "前端技术",
+        items: [
+          { text: "webpack", link: "/page2/" },
+          { text: "TS", link: "/page2/" },
+          { text: "vue3.0", link: "/page2/" },
+          { text: "服务端渲染", link: "/page2/" },
+          { text: "node.js", link: "/page2/" },
+        ],
+      },
     ],
     // 侧边栏
     sidebar: {
       "/page1/": [
         {
           title: "项目总结",
-          collapsable: true,
+          collapsable: false,
           children: [
             { title: "微前端实践", path: "/page1/qiankun" },
             { title: "多环境打包配置", path: "/page1/build" },
             { title: "webpack.DefinePlugin使用", path: "/page1/webpack" },
             { title: "一个导出pdf的方案", path: "/page1/exportPdf" },
             { title: "前端自动化发布", path: "/page1/scp2" },
-            { title: "vue中动态绑定hover效果", path: "/page1/hover" }
+            { title: "vue中动态绑定hover效果", path: "/page1/hover" },
           ],
         },
       ],
       "/page2/": [
         {
           title: "前端技术",
-          collapsable: true,
+          collapsable: false,
           children: [{ title: "vue", path: "/page2/vue" }],
-        },
+        }
       ],
     },
-    displayAllHeaders: true, // 默认值：false
-    lastUpdated: "上次更新", // string | boolean
+    displayAllHeaders: true,
+    lastUpdated: "上次更新",
     smoothScroll: true,
   },
   configureWebpack: () => {
@@ -65,24 +60,22 @@ module.exports = {
   },
   plugins: [
     [
-      '@vuepress/last-updated',
+      "@vuepress/last-updated",
       {
         transformer: (timestamp) => {
-          const date = new Date(timestamp)
-          const year = date.getFullYear()
-          const month = date.getMonth() + 1
-          const day = date.getDate()
-          const hour = date.getHours() + 8
-          const minute = date.getMinutes()
-          const second = date.getSeconds()
-          const week = date.getDay()
-          const weeks = ['日', '一', '二', '三', '四', '五', '六']
-          return `${year}/${month}/${day} ${hour}:${minute}:${second} 周${weeks[week]}`
-        }
-      }
+          const date = new Date(timestamp);
+          const year = date.getFullYear();
+          const month = date.getMonth() + 1;
+          const day = date.getDate();
+          const hour = date.getHours() + 8;
+          const minute = date.getMinutes();
+          const second = date.getSeconds();
+          const week = date.getDay();
+          const weeks = ["日", "一", "二", "三", "四", "五", "六"];
+          return `${year}/${month}/${day} ${hour}:${minute}:${second} 周${weeks[week]}`;
+        },
+      },
     ],
-    [
-      '@vuepress/nprogress'
-    ]
-  ]
+    ["@vuepress/nprogress"],
+  ],
 };
