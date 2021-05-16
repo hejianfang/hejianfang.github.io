@@ -18,7 +18,7 @@ module.exports = {
           // { text: "vue3.0", link: "/page2/" },
           // { text: "服务端渲染", link: "/page2/" },
           // { text: "node.js", link: "/page2/" },
-        ],
+        ]
       },
     ],
     // 侧边栏
