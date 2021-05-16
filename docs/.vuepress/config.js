@@ -13,7 +13,7 @@ module.exports = {
       {
         text: "前端技术",
         items: [
-          { text: "webpack", link: "/page2/" },
+          { text: "webpack", link: "/page2/" }
           // { text: "TS", link: "/page2/" },
           // { text: "vue3.0", link: "/page2/" },
           // { text: "服务端渲染", link: "/page2/" },
