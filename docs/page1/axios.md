@@ -75,3 +75,4 @@ axios.interceptors.response.use(
 )
 export default axios
 ```
+[axios请求的缓存与重复请求过滤的封装](https://juejin.cn/post/6844904167840940040)
