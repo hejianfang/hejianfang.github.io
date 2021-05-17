@@ -49,6 +49,9 @@ module.exports = {
     lastUpdated: "上次更新",
     smoothScroll: true,
   },
+  postcss: {
+		plugins: [require('autoprefixer')]
+	},
   configureWebpack: () => {
     return {
       resolve: {
