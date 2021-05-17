@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AOMR技术博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="查阅知识">
+    
+    <link rel="preload" href="/assets/css/0.styles.692262fb.css" as="style"><link rel="preload" href="/assets/js/app.34f76228.js" as="script"><link rel="preload" href="/assets/js/2.72be0d30.js" as="script"><link rel="preload" href="/assets/js/9.fa63fd1d.js" as="script"><link rel="prefetch" href="/assets/js/10.d3e067c0.js"><link rel="prefetch" href="/assets/js/11.46791625.js"><link rel="prefetch" href="/assets/js/12.9bb91655.js"><link rel="prefetch" href="/assets/js/13.758fa7ac.js"><link rel="prefetch" href="/assets/js/14.f1e6055d.js"><link rel="prefetch" href="/assets/js/15.c9dca701.js"><link rel="prefetch" href="/assets/js/16.314476ba.js"><link rel="prefetch" href="/assets/js/17.3ec9da5a.js"><link rel="prefetch" href="/assets/js/3.3e984bc1.js"><link rel="prefetch" href="/assets/js/4.d115c451.js"><link rel="prefetch" href="/assets/js/5.03a9bf61.js"><link rel="prefetch" href="/assets/js/6.a44b6161.js"><link rel="prefetch" href="/assets/js/7.f4adb7c6.js"><link rel="prefetch" href="/assets/js/8.bf825cf4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.692262fb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">AOMR技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/page1/" class="nav-link router-link-active">
+  项目积累
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术" class="dropdown-title"><span class="title">前端技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端技术" class="mobile-dropdown-title"><span class="title">前端技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/page2/" class="nav-link">
+  vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/page1/" class="nav-link router-link-active">
+  项目积累
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术" class="dropdown-title"><span class="title">前端技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端技术" class="mobile-dropdown-title"><span class="title">前端技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/page2/" class="nav-link">
+  vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>项目总结</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/page1/qiankun.html" class="sidebar-link">微前端实践</a></li><li><a href="/page1/build.html" class="sidebar-link">多环境打包配置</a></li><li><a href="/page1/webpack.html" class="sidebar-link">webpack.DefinePlugin使用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/page1/exportPdf.html" class="sidebar-link">一个导出pdf的方案</a></li><li><a href="/page1/scp2.html" class="sidebar-link">前端自动化发布</a></li><li><a href="/page1/hover.html" class="sidebar-link">vue中动态绑定hover效果</a></li><li><a href="/page1/axios.html" aria-current="page" class="active sidebar-link">如何防止重复发送ajax请求</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>先来说说重复发送ajax请求带来的问题</p> <blockquote><p>场景一：用户快速点击按钮，多次相同的请求打到服务器，给服务器造成压力。如果碰到提交表单操作，而且恰好后端没有做兼容处理，那么可能会造成数据库中插入两条及以上的相同数据</p> <p>场景二：用户频繁切换下拉筛选条件，第一次筛选数据量较多，花费的时间较长，第二次筛选数据量较少，请求后发先至，内容先显示在界面上。但是等到第一次的数据回来之后，就会覆盖掉第二次的显示的数据。筛选结果和查询条件不一致，用户体验很不好</p></blockquote> <p>常用解决方案</p> <ol><li>状态变量 --- 目前使用的办法</li> <li>函数节流和函数防抖</li> <li>请求拦截和请求取消</li></ol> <p>作为一个成熟的ajax应用，它应该能自己在pending过程中选择请求拦截和请求取消</p> <ul><li>请求拦截</li></ul> <p>用一个数组存储目前处于pending状态的请求。发送请求前先判断这个api请求之前是否已经有还在pending的同类，即是否存在上述数组中，如果存在，则不发送请求，不存在就正常发送并且将该api添加到数组中。等请求完结后删除数组中的这个api。</p> <ul><li>请求取消</li></ul> <p>用一个数组存储目前处于pending状态的请求。发送请求时判断这个api请求之前是否已经有还在pending的同类，即是否存在上述数组中，如果存在，则找到数组中pending状态的请求并取消，不存在就将该api添加到数组中。然后发送请求，等请求完结后删除数组中的这个api</p> <p>通过axios 的 cancel token，我们可以轻松做到请求拦截和请求取消</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">let</span> pendingAjax <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> fastClickMsg <span class="token operator">=</span> <span class="token string">'数据请求中，请稍后'</span>
+<span class="token keyword">const</span> CancelToken <span class="token operator">=</span> axios<span class="token punctuation">.</span>CancelToken
+<span class="token keyword">const</span> <span class="token function-variable function">removePendingAjax</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">config<span class="token punctuation">,</span> c</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> url <span class="token operator">=</span> config<span class="token punctuation">.</span>url
+  <span class="token keyword">const</span> index <span class="token operator">=</span> pendingAjax<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token parameter">i</span> <span class="token operator">=&gt;</span> i <span class="token operator">===</span> url<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    c <span class="token operator">?</span> <span class="token function">c</span><span class="token punctuation">(</span>fastClickMsg<span class="token punctuation">)</span> <span class="token operator">:</span> pendingAjax<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    c <span class="token operator">&amp;&amp;</span> pendingAjax<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Add a request interceptor</span>
+axios<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Do something before request is sent</span>
+    config<span class="token punctuation">.</span>cancelToken <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CancelToken</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">removePendingAjax</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Do something with request error</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// Add a response interceptor</span>
+axios<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Any status code that lie within the range of 2xx cause this function to trigger</span>
+    <span class="token comment">// Do something with response data</span>
+    <span class="token function">removePendingAjax</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>config<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">+</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>code <span class="token operator">!==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'network error:'</span> <span class="token operator">+</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>msg<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Any status codes that falls outside the range of 2xx cause this function to trigger</span>
+    <span class="token comment">// Do something with response error</span>
+    Message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> axios
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/5/17 10:56:24 周一</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/page1/hover.html" class="prev">
+        vue中动态绑定hover效果
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.34f76228.js" defer></script><script src="/assets/js/2.72be0d30.js" defer></script><script src="/assets/js/9.fa63fd1d.js" defer></script>
+  </body>
+</html>
