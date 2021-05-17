@@ -11,10 +11,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
       - run: |
-          npm install
-          npm run build
+          yarn
+          yarn build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{secrets.BLOG_GITHUB_TOKEN}}
