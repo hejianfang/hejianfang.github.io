@@ -19,5 +19,4 @@ jobs:
         with:
           github_token: ${{secrets.BLOG_GITHUB_TOKEN}}
           publish_branch: gh-pages
-          cname: jwchan.cn
           publish_dir: ./docs/.vuepress/dist
