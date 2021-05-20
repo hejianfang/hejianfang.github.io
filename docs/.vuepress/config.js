@@ -35,7 +35,8 @@ module.exports = {
             { title: "前端自动化发布", path: "/page1/scp2" },
             { title: "vue中动态绑定hover效果", path: "/page1/hover" },
             { title: "如何防止重复发送ajax请求", path: "/page1/axios" },
-            { title: "多个请求下 loading 的展示与关闭", path: "/page1/loading" }
+            { title: "多个请求下 loading 的展示与关闭", path: "/page1/loading" },
+            { title: "git使用", path: "/page1/git" },
           ],
         },
       ],

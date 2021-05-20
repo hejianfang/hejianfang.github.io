@@ -8,3 +8,4 @@
 - [【2021-05-17】 vue中动态绑定hover效果](/page1/hover/)
 - [【2021-05-18】 如何防止重复发送ajax请求](/page1/axios/)
 - [【2021-05-19】 多个请求下 loading 的展示与关闭](/page1/loading/)
+- [【2021-05-20】 git使用](/page1/git/)
