@@ -37,6 +37,7 @@ module.exports = {
             { title: "如何防止重复发送ajax请求", path: "/page1/axios" },
             { title: "多个请求下 loading 的展示与关闭", path: "/page1/loading" },
             { title: "git使用", path: "/page1/git" },
+            { title: "package-lock.json作用", path: "/page1/package" },
           ],
         },
       ],
