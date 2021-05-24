@@ -38,6 +38,7 @@ module.exports = {
             { title: "多个请求下 loading 的展示与关闭", path: "/page1/loading" },
             { title: "git使用", path: "/page1/git" },
             { title: "package-lock.json作用", path: "/page1/package" },
+            { title: "数组取交集、并集与补集", path: "/page1/array" },
           ],
         },
       ],
