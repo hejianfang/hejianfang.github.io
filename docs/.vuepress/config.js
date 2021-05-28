@@ -40,6 +40,7 @@ module.exports = {
             { title: "package-lock.json作用", path: "/page1/package" },
             { title: "数组取交集、并集与补集", path: "/page1/array" },
             { title: "函数括号与无括号区别", path: "/page1/function" },
+            { title: "js同步与异步问题", path: "/page1/js" },
           ],
         },
       ],
