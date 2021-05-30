@@ -42,6 +42,7 @@ module.exports = {
             { title: "函数括号与无括号区别", path: "/page1/function" },
             { title: "js同步与异步问题", path: "/page1/js" },
             { title: "树形数据处理，过滤", path: "/page1/tree" },
+            { title: "前端为什么要打包", path: "/page1/build1" },
           ],
         },
       ],
