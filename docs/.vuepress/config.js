@@ -51,8 +51,7 @@ module.exports = {
       "/page2/": [
         {
           title: "前端技术",
-          collapsable: false,
-          children: [{ title: "vue", path: "/page2/vue" }],
+          collapsable: false
         }
       ],
     },
