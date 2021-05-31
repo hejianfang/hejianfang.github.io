@@ -10,10 +10,11 @@ module.exports = {
     nav: [
       { text: "首页", link: "/" },
       { text: "项目积累", link: "/page1/" },
+      { text: "每日一题", link: "/page2/" },
       {
         text: "前端技术",
         items: [
-          { text: "vue", link: "/page2/" }
+          { text: "vue", link: "/page3/" }
           // { text: "TS", link: "/page2/" },
           // { text: "vue3.0", link: "/page2/" },
           // { text: "服务端渲染", link: "/page2/" },
