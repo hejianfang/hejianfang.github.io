@@ -51,7 +51,10 @@ module.exports = {
       "/page2/": [
         {
           title: "前端技术",
-          collapsable: false
+          collapsable: false,
+          children: [
+            { title: "day1", path: "/page2/day1" },
+          ]
         }
       ],
     },
