@@ -55,6 +55,7 @@ module.exports = {
           collapsable: false,
           children: [
             { title: "day1", path: "/page2/day1" },
+            { title: "day2", path: "/page2/day2" },
           ]
         }
       ],
