@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>讲一下let、var、const的区别 | AOMR技术博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="查阅知识">
+    
+    <link rel="preload" href="/assets/css/0.styles.692262fb.css" as="style"><link rel="preload" href="/assets/js/app.b41dfb88.js" as="script"><link rel="preload" href="/assets/js/2.72be0d30.js" as="script"><link rel="preload" href="/assets/js/29.7e474a9c.js" as="script"><link rel="prefetch" href="/assets/js/10.02d4d268.js"><link rel="prefetch" href="/assets/js/11.16d83efa.js"><link rel="prefetch" href="/assets/js/12.0eb48dc1.js"><link rel="prefetch" href="/assets/js/13.261a9d26.js"><link rel="prefetch" href="/assets/js/14.86d11c51.js"><link rel="prefetch" href="/assets/js/15.9685f86b.js"><link rel="prefetch" href="/assets/js/16.36c396b8.js"><link rel="prefetch" href="/assets/js/17.ad1128f1.js"><link rel="prefetch" href="/assets/js/18.975adf0a.js"><link rel="prefetch" href="/assets/js/19.3f742569.js"><link rel="prefetch" href="/assets/js/20.6ec44bc9.js"><link rel="prefetch" href="/assets/js/21.abc67976.js"><link rel="prefetch" href="/assets/js/22.746dec44.js"><link rel="prefetch" href="/assets/js/23.cd32f555.js"><link rel="prefetch" href="/assets/js/24.6b201780.js"><link rel="prefetch" href="/assets/js/25.cdb7a918.js"><link rel="prefetch" href="/assets/js/26.1271d2bc.js"><link rel="prefetch" href="/assets/js/27.135f46bd.js"><link rel="prefetch" href="/assets/js/28.4c772de5.js"><link rel="prefetch" href="/assets/js/3.3e984bc1.js"><link rel="prefetch" href="/assets/js/30.73891961.js"><link rel="prefetch" href="/assets/js/31.2802947d.js"><link rel="prefetch" href="/assets/js/4.2090f9f9.js"><link rel="prefetch" href="/assets/js/5.03a9bf61.js"><link rel="prefetch" href="/assets/js/6.a44b6161.js"><link rel="prefetch" href="/assets/js/7.f4adb7c6.js"><link rel="prefetch" href="/assets/js/8.d0b89722.js"><link rel="prefetch" href="/assets/js/9.84c074b2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.692262fb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">AOMR技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/page1/" class="nav-link">
+  项目积累
+</a></div><div class="nav-item"><a href="/page2/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术" class="dropdown-title"><span class="title">前端技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端技术" class="mobile-dropdown-title"><span class="title">前端技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/page3/" class="nav-link">
+  vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/page1/" class="nav-link">
+  项目积累
+</a></div><div class="nav-item"><a href="/page2/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端技术" class="dropdown-title"><span class="title">前端技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端技术" class="mobile-dropdown-title"><span class="title">前端技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/page3/" class="nav-link">
+  vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>每日一题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/page2/day1.html" class="sidebar-link">day1</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/page2/day2.html" class="sidebar-link">day2</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/page2/day3.html" aria-current="page" class="active sidebar-link">day3</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="讲一下let、var、const的区别"><a href="#讲一下let、var、const的区别" class="header-anchor">#</a> 讲一下let、var、const的区别</h3> <ul><li>var 没有块级作用域，支持变量提升。</li> <li>let 有块级作用域，不支持变量提升。不允许重复声明，暂存性死区。不能通过window.变量名进行访问</li> <li>const 有块级作用域，不支持变量提升，不允许重复声明，暂存性死区。声明一个变量一旦声明就不能改变，改变报错。</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/6/4 9:12:11 周五</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/page2/day2.html" class="prev">
+        day2
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b41dfb88.js" defer></script><script src="/assets/js/2.72be0d30.js" defer></script><script src="/assets/js/29.7e474a9c.js" defer></script>
+  </body>
+</html>
