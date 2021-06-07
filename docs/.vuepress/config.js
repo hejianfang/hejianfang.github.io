@@ -14,7 +14,8 @@ module.exports = {
       {
         text: "前端技术",
         items: [
-          { text: "vue", link: "/page3/" }
+          { text: "vue", link: "/page3/" },
+          { text: "qiankun", link: "/page3/" },
           // { text: "TS", link: "/page2/" },
           // { text: "vue3.0", link: "/page2/" },
           // { text: "服务端渲染", link: "/page2/" },
@@ -57,6 +58,7 @@ module.exports = {
             { title: "day1", path: "/page2/day1" },
             { title: "day2", path: "/page2/day2" },
             { title: "day3", path: "/page2/day3" },
+            { title: "day4", path: "/page2/day4" },
           ]
         }
       ],
