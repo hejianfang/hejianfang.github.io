@@ -13,8 +13,9 @@ module.exports = {
       { text: "每日一题", link: "/page2/" },
       {
         text: "前端技术",
+        link: "/page3/",
         items: [
-          { text: "vue", link: "/page3/" },
+          { text: "vue", link: "/page3/vue" },
           { text: "qiankun", link: "/page3/" },
           // { text: "TS", link: "/page2/" },
           // { text: "vue3.0", link: "/page2/" },
