@@ -13,10 +13,9 @@ module.exports = {
       { text: "每日一题", link: "/page2/" },
       {
         text: "前端技术",
-        link: "/page3/",
         items: [
-          { text: "vue", link: "/page3/vue" },
           { text: "qiankun", link: "/page3/" },
+          { text: "vue", link: "/page3/vue" },
           // { text: "TS", link: "/page2/" },
           // { text: "vue3.0", link: "/page2/" },
           // { text: "服务端渲染", link: "/page2/" },
@@ -61,6 +60,7 @@ module.exports = {
             { title: "day3", path: "/page2/day3" },
             { title: "day4", path: "/page2/day4" },
             { title: "day5", path: "/page2/day5" },
+            { title: "day6", path: "/page2/day6" },
           ]
         }
       ],
