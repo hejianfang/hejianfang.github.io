@@ -14,7 +14,7 @@ module.exports = {
       {
         text: "前端技术",
         items: [
-          { text: "思维导图", link: "/page3/" },
+          { text: "思维导图", link: "/page3/index" },
           { text: "vue", link: "/page3/vue" },
           // { text: "TS", link: "/page2/" },
           // { text: "vue3.0", link: "/page2/" },
@@ -76,6 +76,8 @@ module.exports = {
           collapsable: false,
           children: [
             { title: "vue框架", path: "/page3/vue1" },
+            { title: "vuex", path: "/page3/vue2" },
+            { title: "axios", path: "/page1/axios" },
           ]
         }
       ]
