@@ -78,7 +78,7 @@ module.exports = {
             { title: "vue框架", path: "/page3/vue1" },
             { title: "vuex", path: "/page3/vue2" },
             { title: "axios", path: "/page1/axios" },
-            { title: "vue.config", path: "/page1/vueConfig" },
+            { title: "vue.config", path: "/page3/vueConfig" },
           ]
         }
       ]
