@@ -14,7 +14,7 @@ module.exports = {
       {
         text: "前端技术",
         items: [
-          { text: "qiankun", link: "/page3/" },
+          { text: "思维导图", link: "/page3/" },
           { text: "vue", link: "/page3/vue" },
           // { text: "TS", link: "/page2/" },
           // { text: "vue3.0", link: "/page2/" },
@@ -70,6 +70,15 @@ module.exports = {
           ]
         }
       ],
+      "/page3/": [
+        {
+          title: 'vue篇',
+          collapsable: false,
+          children: [
+            { title: "vue框架", path: "/page3/vue1" },
+          ]
+        }
+      ]
     },
     displayAllHeaders: true,
     lastUpdated: "上次更新",
