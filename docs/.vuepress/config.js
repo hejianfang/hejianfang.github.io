@@ -16,10 +16,7 @@ module.exports = {
         items: [
           { text: "思维导图", link: "/page3/index" },
           { text: "vue", link: "/page3/vue" },
-          // { text: "TS", link: "/page2/" },
-          // { text: "vue3.0", link: "/page2/" },
-          // { text: "服务端渲染", link: "/page2/" },
-          // { text: "node.js", link: "/page2/" },
+          { text: "JavaScript", link: "/page3/jsmode" }
         ]
       },
     ],
@@ -82,6 +79,13 @@ module.exports = {
             { title: "vuex", path: "/page3/vue2" },
             { title: "axios", path: "/page1/axios" },
             { title: "vue.config", path: "/page3/vueConfig" },
+          ]
+        },
+        {
+          title: 'JavaScript',
+          collapsable: false,
+          children: [
+            { title: "设计模式", path: "/page3/jsmode" }
           ]
         }
       ]
