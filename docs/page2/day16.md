@@ -11,12 +11,12 @@ for (let x of str) {
     break; //终止循环
   }
 } // c
-for (let i = 0; i < str.length; i++) {
-  if (!str.includes(str[i], i+ 1)) {
-    console.log(str[i]);
-    break;
-  }
-} // a
+// for (let i = 0; i < str.length; i++) {
+//   if (!str.includes(str[i], i+ 1)) {
+//     console.log(str[i]);
+//     break;
+//   }
+// } // a
 for (let i = 0; i < str.length; i++) {
   var c = str.charAt(i);
   if (str.indexOf(c) == i && str.indexOf(c, i + 1) == -1) {
@@ -31,5 +31,3 @@ for (let i = 0; i < str.length; i++) {
   }
 } // c
 ```
-
-第二种方法不正确。
