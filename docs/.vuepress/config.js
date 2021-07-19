@@ -44,6 +44,7 @@ module.exports = {
             { title: "前端为什么要打包", path: "/page1/build1" },
             { title: "前端工程化", path: "/page1/engineering" },
             { title: "pointer-events使用记录", path: "/page1/pointer" },
+            { title: "options请求", path: "/page1/options" },
           ],
         },
       ],
