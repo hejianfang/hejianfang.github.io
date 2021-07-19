@@ -68,6 +68,7 @@ module.exports = {
             { title: "day13", path: "/page2/day13" },
             { title: "day14", path: "/page2/day14" },
             { title: "day15", path: "/page2/day15" },
+            { title: "day16", path: "/page2/day16" },
           ]
         }
       ],
