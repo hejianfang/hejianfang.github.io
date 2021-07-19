@@ -31,3 +31,5 @@ for (let i = 0; i < str.length; i++) {
   }
 } // c
 ```
+![最优方案](~public/page2/day16.png)
+推荐第三、第四种解法
