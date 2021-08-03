@@ -45,6 +45,7 @@ module.exports = {
             { title: "前端工程化", path: "/page1/engineering" },
             { title: "pointer-events使用记录", path: "/page1/pointer" },
             { title: "options请求", path: "/page1/options" },
+            { title: "前端多条件筛选", path: "/page1/select" },
           ],
         },
       ],
