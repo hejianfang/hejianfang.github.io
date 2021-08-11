@@ -88,7 +88,8 @@ module.exports = {
           title: 'JavaScript',
           collapsable: false,
           children: [
-            { title: "设计模式", path: "/page3/jsmode" }
+            { title: "设计模式", path: "/page3/jsmode" },
+            { title: "虚拟DOM", path: "/page3/virtalDom" }
           ]
         }
       ]
