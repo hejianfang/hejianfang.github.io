@@ -16,7 +16,8 @@ module.exports = {
         items: [
           { text: "思维导图", link: "/page3/index" },
           { text: "vue", link: "/page3/vue" },
-          { text: "JavaScript", link: "/page3/jsmode" }
+          { text: "JavaScript", link: "/page3/jsmode" },
+          { text: "HTML", link: "/page3/HTML" }
         ]
       },
     ],
@@ -90,6 +91,13 @@ module.exports = {
           children: [
             { title: "设计模式", path: "/page3/jsmode" },
             { title: "虚拟DOM", path: "/page3/virtalDom" }
+          ]
+        },
+        {
+          title: 'JavaScript',
+          collapsable: false,
+          children: [
+            { title: "HTML", path: "/page3/HTML" }
           ]
         }
       ]
