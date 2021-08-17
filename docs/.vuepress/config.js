@@ -90,11 +90,17 @@ module.exports = {
           collapsable: false,
           children: [
             { title: "设计模式", path: "/page3/jsmode" },
-            { title: "虚拟DOM", path: "/page3/virtalDom" }
+            { title: "虚拟DOM", path: "/page3/virtalDom" },
+            { title: "js基本语法", path: "/page3/基本" },
+            { title: "js数据类型", path: "/page3/数据类型" },
+            { title: "js错误处理机制", path: "/page3/错误处理机制" },
+            { title: "console对象", path: "/page3/console对象" },
+            { title: "js标准库", path: "/page3/js标准库" },
+            { title: "面向对象编程", path: "/page3/面向对象编程" }
           ]
         },
         {
-          title: 'JavaScript',
+          title: 'HTML',
           collapsable: false,
           children: [
             { title: "HTML", path: "/page3/HTML" }
