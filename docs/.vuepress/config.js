@@ -96,7 +96,9 @@ module.exports = {
             { title: "js错误处理机制", path: "/page3/错误处理机制" },
             { title: "console对象", path: "/page3/console对象" },
             { title: "js标准库", path: "/page3/js标准库" },
-            { title: "面向对象编程", path: "/page3/面向对象编程" }
+            { title: "面向对象编程", path: "/page3/面向对象编程" },
+            { title: "事件模型", path: "/page3/事件模型" },
+            { title: "浏览器模型", path: "/page3/浏览器模型" }
           ]
         },
         {
