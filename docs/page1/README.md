@@ -1,3 +1,11 @@
+<!--
+ * @Author: hejianfang
+ * @Email: hejianfang@meishubao.com
+ * @Date: 2021-08-11 10:32:39
+ * @LastEditors: hejianfang
+ * @LastEditTime: 2021-08-18 18:14:25
+ * @Description: 
+-->
 # 项目总结
 
 - [微前端实践](/page1/qiankun/)
@@ -19,3 +27,4 @@
 - [pointer-events使用记录](/page1/pointer/)
 - [options请求](/page1/options/)
 - [前端多条件筛选](/page1/select/)
+- [字符串转为JSON对象](/page1/字符串转为JSON对象/)

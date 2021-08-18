@@ -47,6 +47,7 @@ module.exports = {
             { title: "pointer-events使用记录", path: "/page1/pointer" },
             { title: "options请求", path: "/page1/options" },
             { title: "前端多条件筛选", path: "/page1/select" },
+            { title: "字符串转为JSON对象", path: "/page1/字符串转为JSON对象" }
           ],
         },
       ],
