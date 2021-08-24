@@ -17,7 +17,8 @@ module.exports = {
           { text: "思维导图", link: "/page3/index" },
           { text: "vue", link: "/page3/vue" },
           { text: "JavaScript", link: "/page3/jsmode" },
-          { text: "HTML", link: "/page3/HTML" }
+          { text: "HTML", link: "/page3/HTML" },
+          { text: "手写实现篇", link: "/page3/mypromise" }
         ]
       },
     ],
@@ -108,6 +109,13 @@ module.exports = {
           collapsable: false,
           children: [
             { title: "HTML", path: "/page3/HTML" }
+          ]
+        },
+        {
+          title: '手写实现篇',
+          collapsable: false,
+          children: [
+            { title: "promise", path: "/page3/mypromise" }
           ]
         }
       ]
