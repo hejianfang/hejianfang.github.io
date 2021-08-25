@@ -115,7 +115,8 @@ module.exports = {
           title: '手写实现篇',
           collapsable: false,
           children: [
-            { title: "promise", path: "/page3/mypromise" }
+            { title: "promise", path: "/page3/mypromise" },
+            { title: "简单react实现", path: "/page3/简单react实现" }
           ]
         }
       ]
