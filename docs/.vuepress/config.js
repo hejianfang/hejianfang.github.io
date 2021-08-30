@@ -49,7 +49,8 @@ module.exports = {
             { title: "options请求", path: "/page1/options" },
             { title: "前端多条件筛选", path: "/page1/select" },
             { title: "字符串转为JSON对象", path: "/page1/字符串转为JSON对象" },
-            { title: "JavaScript技巧", path: "/page1/JavaScript技巧" }
+            { title: "JavaScript技巧", path: "/page1/JavaScript技巧" },
+            { title: "vue如何快速转react开发", path: "/page1/vue如何快速转react开发" }
           ],
         },
       ],
