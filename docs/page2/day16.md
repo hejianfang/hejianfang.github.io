@@ -30,6 +30,15 @@ for (let i = 0; i < str.length; i++) {
     break;
   }
 } // c
+const sin = (val) => {
+  const re = new Set()
+  for (let index = 0; index < val.length; index++) {
+    re.has(val[index]) ? re.delete(val[index]) : re.add(val[index])
+  }
+  return [...re][0]
+}
+console.log(sin([1, 1, 2, 3, 5, 4])) // 2
+
 ```
 ![最优方案](~public/page2/day16.png)
 推荐第三、第四种解法
