@@ -18,8 +18,8 @@ module.exports = {
           { text: "vue", link: "/page3/vue" },
           { text: "JavaScript", link: "/page3/jsmode" },
           { text: "HTML", link: "/page3/HTML" },
-          { text: "手写实现篇", link: "/page3/mypromise" }
-        ]
+          { text: "手写实现篇", link: "/page3/mypromise" },
+        ],
       },
     ],
     // 侧边栏
@@ -36,7 +36,10 @@ module.exports = {
             { title: "前端自动化发布", path: "/page1/scp2" },
             { title: "vue中动态绑定hover效果", path: "/page1/hover" },
             { title: "如何防止重复发送ajax请求", path: "/page1/axios" },
-            { title: "多个请求下 loading 的展示与关闭", path: "/page1/loading" },
+            {
+              title: "多个请求下 loading 的展示与关闭",
+              path: "/page1/loading",
+            },
             { title: "git使用", path: "/page1/git" },
             { title: "package-lock.json作用", path: "/page1/package" },
             { title: "数组取交集、并集与补集", path: "/page1/array" },
@@ -50,7 +53,11 @@ module.exports = {
             { title: "前端多条件筛选", path: "/page1/select" },
             { title: "字符串转为JSON对象", path: "/page1/字符串转为JSON对象" },
             { title: "JavaScript技巧", path: "/page1/JavaScript技巧" },
-            { title: "vue如何快速转react开发", path: "/page1/vue如何快速转react开发" }
+            {
+              title: "vue如何快速转react开发",
+              path: "/page1/vue如何快速转react开发",
+            },
+            { title: "Rem布局的原理解析", path: "/page1/Rem布局的原理解析" },
           ],
         },
       ],
@@ -75,22 +82,22 @@ module.exports = {
             { title: "day14", path: "/page2/day14" },
             { title: "day15", path: "/page2/day15" },
             { title: "day16", path: "/page2/day16" },
-          ]
-        }
+          ],
+        },
       ],
       "/page3/": [
         {
-          title: 'vue篇',
+          title: "vue篇",
           collapsable: false,
           children: [
             { title: "vue框架", path: "/page3/vue1" },
             { title: "vuex", path: "/page3/vue2" },
             { title: "axios", path: "/page1/axios" },
             { title: "vue.config", path: "/page3/vueConfig" },
-          ]
+          ],
         },
         {
-          title: 'JavaScript',
+          title: "JavaScript",
           collapsable: false,
           children: [
             { title: "设计模式", path: "/page3/jsmode" },
@@ -103,33 +110,31 @@ module.exports = {
             { title: "面向对象编程", path: "/page3/面向对象编程" },
             { title: "事件模型", path: "/page3/事件模型" },
             { title: "浏览器模型", path: "/page3/浏览器模型" },
-            { title: "ES6", path: "/page3/ES6" }
-          ]
+            { title: "ES6", path: "/page3/ES6" },
+          ],
         },
         {
-          title: 'HTML',
+          title: "HTML",
           collapsable: false,
-          children: [
-            { title: "HTML", path: "/page3/HTML" }
-          ]
+          children: [{ title: "HTML", path: "/page3/HTML" }],
         },
         {
-          title: '手写实现篇',
+          title: "手写实现篇",
           collapsable: false,
           children: [
             { title: "promise", path: "/page3/mypromise" },
-            { title: "简单react实现", path: "/page3/简单react实现" }
-          ]
-        }
-      ]
+            { title: "简单react实现", path: "/page3/简单react实现" },
+          ],
+        },
+      ],
     },
     displayAllHeaders: true,
     lastUpdated: "上次更新",
     smoothScroll: true,
   },
   postcss: {
-		plugins: [require('autoprefixer')]
-	},
+    plugins: [require("autoprefixer")],
+  },
   configureWebpack: () => {
     return {
       resolve: {
