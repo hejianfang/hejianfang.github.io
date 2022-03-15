@@ -59,6 +59,7 @@ module.exports = {
             },
             { title: "Rem布局的原理解析", path: "/page1/Rem布局的原理解析" },
             { title: "git-release工具", path: "/page1/git_release" },
+            { title: "获取网络图片宽高", path: "/page1/img" },
           ],
         },
       ],
