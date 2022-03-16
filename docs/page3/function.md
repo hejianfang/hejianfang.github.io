@@ -5,7 +5,7 @@
  <body>
   <div>
     <button id="btn" onclick="btnClick()">点击</button>
-    <!-- 
+    <!--
       *在button标签中绑定onclick事件，
       *要写成test()，不能写成test，
       *test是指向一个function，
@@ -19,8 +19,8 @@
      -->
   </div>
   <script>
-    /* 
-    简单来说就是带括号的是执行一次函数，不带括号的函数就是一个函数对象 
+    /*
+    简单来说就是带括号的是执行一次函数，不带括号的函数就是一个函数对象
     */
     let btn = document.getElementById('btn')
     console.log(btn)
@@ -41,12 +41,12 @@
 </body>
 ```
 
-问题来了，在vue中，@click="handlr" 可以带括号，也可以不带括号，如何实现呢？
+问题来了，在 vue 中，@click="handlr" 可以带括号，也可以不带括号，如何实现呢？
 
-1. vue初始化的时候，将method中的方法代理到vue[key]的同时修饰了事件的回调函数.
-通过 initState(), initMethods(), bind() 绑定了作用域
-2. vue进入compile环节需要将该div变成ast(抽象语法树）。当编译到该div时经过核心函数genHandler(), 如果事件函数有修饰符。就处理完修饰符，添加修饰符对应的函数语句。再返回。这个过程还会单独对native修饰符做特殊处理。
-3. compile完后自然就render
+1. vue 初始化的时候，将 method 中的方法代理到 vue[key]的同时修饰了事件的回调函数.
+   通过 initState(), initMethods(), bind() 绑定了作用域
+2. vue 进入 compile 环节需要将该 div 变成 ast(抽象语法树）。当编译到该 div 时经过核心函数 genHandler(), 如果事件函数有修饰符。就处理完修饰符，添加修饰符对应的函数语句。再返回。这个过程还会单独对 native 修饰符做特殊处理。
+3. compile 完后自然就 render
    ```
    _c('div',{attrs:{"id":"test1"},
    on:{"click":click1}},
@@ -54,4 +54,4 @@
    _c('div',{attrs:{"id":"test2"},
    on:{"click":function($event){$event.stopPropagation();click2($event)}}}
    ```
-4. 虚拟dom --- > 真实dom的时候。会调用核心函数 add$1() 通过addEventListener绑定相应事件
+4. 虚拟 dom --- > 真实 dom 的时候。会调用核心函数 add\$1() 通过 addEventListener 绑定相应事件
