@@ -1,7 +1,7 @@
 const path = require("path");
 module.exports = {
   title: "AOMR技术博客",
-  description: "查阅知识",
+  description: "",
   base: "/",
   themeConfig: {
     search: true, //搜索
